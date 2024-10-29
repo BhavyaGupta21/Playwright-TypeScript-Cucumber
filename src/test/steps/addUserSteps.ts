@@ -16,8 +16,8 @@ When('I enter the required information', { timeout: 20000 }, async function () {
 
     await pageFixture.page.locator('input[placeholder="Type for hints..."]').pressSequentially("test");
     await pageFixture.page.waitForSelector('input[placeholder="Type for hints..."]')
-    await expect(pageFixture.page.locator('//span[contains(text(),"Automation")]')).toBeVisible();
-    await pageFixture.page.locator('//span[contains(text(),"Automation")]').click();
+    await expect(pageFixture.page.locator('//span[contains(text(),"Test1")]')).toBeVisible();
+    await pageFixture.page.locator('//span[contains(text(),"Test1")]').click();
 
     await pageFixture.page.locator('(//div[@class="oxd-select-text-input"])[2]').click();
     await pageFixture.page.locator('//span[normalize-space()="Enabled"]').click();
@@ -33,11 +33,8 @@ When('I click on the Save button', async function () {
 
 
 Then('I should be able to see the new user in the list of users', {timeout: 10000}, async function () {
-  console.log("Executed");
   await pageFixture.page.waitForSelector('//button[normalize-space()="Add"]');
-  console.log("Executed");
 
   await expect(pageFixture.page.locator(`text = ${userName}`)).toBeVisible();
-  console.log("Executed");
     //await expect(pageFixture.page.locator(`//div[contains(text(),"${userName}")]`)).toHaveText(userName);
   });
