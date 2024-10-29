@@ -10,6 +10,9 @@
             
         ],
         "requireModule":["ts-node/register"],
-        "format": ["html:test-result/report/cucumber-report.html"]
+        "format": [
+            "html:test-result/report/cucumber-report.html",
+            "json:test-result/report/cucumber-report.json"
+        ]
     }
 }

@@ -1,4 +1,4 @@
-Feature: OrangeHRM Login Functioanlity
+Feature: OrangeHRM Login Functionality
 
 Scenario: Login and Logout with valid credentials
 Given I am on the OrangeHRM login page
